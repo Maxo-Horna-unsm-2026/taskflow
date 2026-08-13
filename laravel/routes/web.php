@@ -14,5 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $personas = [
+        [
+            'nombre' => 'maxo', 
+            'apellido' => 'horna',
+            'edad' => 22
+        ],
+        [
+            'nombre' => 'Juan',
+            'apellido' => 'Pérez',
+            'edad' => 30,
+        ],
+        [
+            'nombre' => 'María',
+            'apellido' => 'González',
+            'edad' => 25,
+        ],
+        [
+            'nombre' => 'Pedro',
+            'apellido' => 'López',
+            'edad' => 28,
+        ],
+        [
+            'nombre' => 'Ana',
+            'apellido' => 'Martínez',
+            'edad' => 32,
+        ],
+    ];
+    return view('welcome' , compact('personas'));
 });
